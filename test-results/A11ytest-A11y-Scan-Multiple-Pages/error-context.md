@@ -84,115 +84,115 @@ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 2
 # Test source
 
 ```ts
-  147 |             <strong>Help:</strong>
-  148 |             ${v.help}
-  149 |             </p>
-  150 |             <p>
-  151 |             <strong>Help URL:</strong>
-  152 |             ${v.helpUrl}
-  153 |             ${v.helpUrl}
-  154 |             </a>
-  155 |             </p>
-  156 |             <p>
-  157 |             <strong> Affected Element:</strong></p>
-  158 |             ${v.nodes.map((node, nodeIndex) => `
-  159 |                 
-  160 |                 <p>
-  161 |                 <strong>Target:</strong>
-  162 |                 ${node.target.join(', ')}
-  163 |                 </p>
-  164 |                 <p>
-  165 |                 <strong>HTML Snippet:</strong>
-  166 |                 </p>
-  167 |                 <pre>
-  168 |                 ${node.html
-  169 |                     .replace(/</g, '&lt;')
-  170 |                     .replace(/>/g, '&gt;')
-  171 |                 }
-  172 |                 </pre>
-  173 |                 <p>
-  174 |                 <strong>Failure Summary:</strong>
-  175 |                 </p>
-  176 |                 <pre>
-  177 |                 ${node.failureSummary || 'N/A'}
-  178 |                 </pre>
-  179 |                 <p>
-  180 |                 <strong>Fix Recommendation:</strong>
-  181 |                 </p>
-  182 |                 <p>Review and follow the remediation guidance:</p>
-  183 |                 <p>
-  184 |                 ${v.helpURL}
-  185 |                 </p>
-  186 |                 `).join('')
-  187 |             }
-  188 |             <hr>            
-  189 |             `;
-  190 |         });
-  191 |     }
-  192 | 
-  193 | });
-  194 | htmlContent += `
-  195 | </body>
-  196 | </html>
-  197 | `;
-  198 | 
-  199 | const totalViolations =
-  200 | criticalCount +
-  201 | seriousCount +
-  202 | moderateCount +
-  203 | minorCount;
-  204 | 
-  205 | let accessibilityScore =
-  206 |  100 - (
-  207 |     criticalCount * 10 +
-  208 |     seriousCount * 5 +
-  209 |     moderateCount * 2 +
-  210 |     minorCount * 1
-  211 |    );
-  212 |     
-  213 |     accessibilityScore =
-  214 |     Math.max(accessibilityScore, 0);
-  215 | 
-  216 | const summarySection = `
-  217 |    <h2>Accessibility Summary</h2>
-  218 |     <p><strong>Report ID:</strong> ${reportId}</p>
-  219 |     <p><strong>Application:</strong> ${applicationName}</p>
-  220 |     <p><strong>Scan Date:</strong> ${scanDate}</p>
-  221 |     <p><strong>Pages Scanned:</strong> ${pages.length}</p>
-  222 |     <p><strong>Total Violations:</strong> ${totalViolations}</p>
-  223 |     <p><strong>Critical:</strong> ${criticalCount}</p>
-  224 |     <p><strong>Serious:</strong> ${seriousCount}</p>
-  225 |     <p><strong>Moderate:</strong> ${moderateCount}</p>
-  226 |     <p><strong>Minor:</strong> ${minorCount}</p>
-  227 | 
-  228 |     <p>
-  229 |     <strong>Accessibility Score:</strong>
-  230 |       ${accessibilityScore}%
-  231 |     </p>
-  232 | 
-  233 |     <p>
-  234 |       <strong>Status:</strong>
-  235 |         ${
-  236 |             criticalCount > 0 ||
-  237 |             seriousCount > 0
-  238 |             ? 'FAIL'
-  239 |             : 'PASS'
-  240 |         }
-  241 |         </p>
-  242 |         <hr>
-  243 |     `;
-  244 |       htmlContent = summarySection + htmlContent;
-  245 |       fs.writeFileSync('a11y-report.html', htmlContent);
-  246 |       if (totalCriticalOrSeriousIssues > 0) {
-> 247 |         throw new Error(
+  154 |             ${v.helpUrl}
+  155 |             </a>
+  156 |             </p>
+  157 |             <p>
+  158 |             <strong> Affected Element:</strong></p>
+  159 |             ${v.nodes.map((node, nodeIndex) => `
+  160 |                 
+  161 |                 <p>
+  162 |                 <strong>Target:</strong>
+  163 |                 ${node.target.join(', ')}
+  164 |                 </p>
+  165 |                 <p>
+  166 |                 <strong>HTML Snippet:</strong>
+  167 |                 </p>
+  168 |                 <pre>
+  169 |                 ${node.html
+  170 |                     .replace(/</g, '&lt;')
+  171 |                     .replace(/>/g, '&gt;')
+  172 |                 }
+  173 |                 </pre>
+  174 |                 <p>
+  175 |                 <strong>Failure Summary:</strong>
+  176 |                 </p>
+  177 |                 <pre>
+  178 |                 ${node.failureSummary || 'N/A'}
+  179 |                 </pre>
+  180 |                 <p>
+  181 |                 <strong>Actual Result:</strong>
+  182 |                 </p>
+  183 |                 <pre>
+  184 |                 ${node.failureSummary || 'N/A'}
+  185 |                 </pre>
+  186 |                 <p>
+  187 |                 <strong>Fix Recommendation:</strong>
+  188 |                 </p>
+  189 |                 <p>Review and follow the remediation guidance:</p>
+  190 |                 <p>
+  191 |                 ${v.helpURL}
+  192 |                 </p>
+  193 |                 `).join('')
+  194 |             }
+  195 |             <hr>            
+  196 |             `;
+  197 |         });
+  198 |     }
+  199 | 
+  200 | });
+  201 | htmlContent += `
+  202 | </body>
+  203 | </html>
+  204 | `;
+  205 | 
+  206 | const totalViolations =
+  207 | criticalCount +
+  208 | seriousCount +
+  209 | moderateCount +
+  210 | minorCount;
+  211 | 
+  212 | let accessibilityScore =
+  213 |  100 - (
+  214 |     criticalCount * 10 +
+  215 |     seriousCount * 5 +
+  216 |     moderateCount * 2 +
+  217 |     minorCount * 1
+  218 |    );
+  219 |     
+  220 |     accessibilityScore =
+  221 |     Math.max(accessibilityScore, 0);
+  222 | 
+  223 | const summarySection = `
+  224 |    <h2>Accessibility Summary</h2>
+  225 |     <p><strong>Report ID:</strong> ${reportId}</p>
+  226 |     <p><strong>Application:</strong> ${applicationName}</p>
+  227 |     <p><strong>Scan Date:</strong> ${scanDate}</p>
+  228 |     <p><strong>Pages Scanned:</strong> ${pages.length}</p>
+  229 |     <p><strong>Total Violations:</strong> ${totalViolations}</p>
+  230 |     <p><strong>Critical:</strong> ${criticalCount}</p>
+  231 |     <p><strong>Serious:</strong> ${seriousCount}</p>
+  232 |     <p><strong>Moderate:</strong> ${moderateCount}</p>
+  233 |     <p><strong>Minor:</strong> ${minorCount}</p>
+  234 | 
+  235 |     <p>
+  236 |     <strong>Accessibility Score:</strong>
+  237 |       ${accessibilityScore}%
+  238 |     </p>
+  239 | 
+  240 |     <p>
+  241 |       <strong>Status:</strong>
+  242 |         ${
+  243 |             criticalCount > 0 ||
+  244 |             seriousCount > 0
+  245 |             ? 'FAIL'
+  246 |             : 'PASS'
+  247 |         }
+  248 |         </p>
+  249 |         <hr>
+  250 |     `;
+  251 |       htmlContent = summarySection + htmlContent;
+  252 |       fs.writeFileSync('a11y-report.html', htmlContent);
+  253 |       if (totalCriticalOrSeriousIssues > 0) {
+> 254 |         throw new Error(
       |               ^ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 2
-  248 |             `Accessibility Quality Gate Failed. Critical/Serious Issues Found: ${totalCriticalOrSeriousIssues}`
-  249 |         );
-  250 |       }
-  251 | 
-  252 |     console.log("Accessibility Scan Started");
-  253 |     console.log("Report Created Successful");
-  254 | 
-  255 | }
-  256 | );
+  255 |             `Accessibility Quality Gate Failed. Critical/Serious Issues Found: ${totalCriticalOrSeriousIssues}`
+  256 |         );
+  257 |       }
+  258 | 
+  259 |     console.log("Accessibility Scan Started");
+  260 |     console.log("Report Created Successfully");
+  261 | 
+  262 | }
+  263 | );
 ```
