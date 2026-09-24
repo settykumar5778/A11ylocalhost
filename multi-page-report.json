@@ -1,5 +1,322 @@
 [
   {
+    "page": "https://apple.com",
+    "violationCount": 4,
+    "violations": [
+      {
+        "id": "aria-allowed-role",
+        "impact": "minor",
+        "tags": [
+          "cat.aria",
+          "best-practice"
+        ],
+        "description": "Ensure role attribute has an appropriate value for the element",
+        "help": "ARIA role should be appropriate for the element",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-role?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "aria-allowed-role",
+                "data": [
+                  "img"
+                ],
+                "relatedNodes": [],
+                "impact": "minor",
+                "message": "ARIA role img is not allowed for given element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "minor",
+            "html": "<video id=\"apple-upgrade\" muted=\"\" preload=\"none\" playsinline=\"\" data-inline-media-ba...=\"/105/media/us/home/2...\" data-inline-media-pl...=\"{\"start\":\"t - (100vh...\" aria-label=\"Apple Upgrade, iPhon...\" role=\"img\">",
+            "target": [
+              "#apple-upgrade"
+            ],
+            "failureSummary": "Fix any of the following:\n  ARIA role img is not allowed for given element"
+          },
+          {
+            "any": [
+              {
+                "id": "aria-allowed-role",
+                "data": [
+                  "tabpanel"
+                ],
+                "relatedNodes": [],
+                "impact": "minor",
+                "message": "ARIA role tabpanel is not allowed for given element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "minor",
+            "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-tv-show=\"brothers\" data-title=\"Brothers\" data-ac-gallery-item=\"\" data-analytics-galle...=\"brothers\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" aria-labelledby=\"endless-entertainmen...\" ...>",
+            "target": [
+              "li[data-tv-show=\"brothers\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  ARIA role tabpanel is not allowed for given element"
+          },
+          {
+            "any": [
+              {
+                "id": "aria-allowed-role",
+                "data": [
+                  "tabpanel"
+                ],
+                "relatedNodes": [],
+                "impact": "minor",
+                "message": "ARIA role tabpanel is not allowed for given element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "minor",
+            "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-media-gallery-i...=\"music\" data-fam-music=\"sabrina carpenter: t...\" data-ac-gallery-item=\"\" data-analytics-galle...=\"sabrina carpenter: t...\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" ...>",
+            "target": [
+              ".current[data-media-gallery-item=\"1\"][data-media-gallery-item-service=\"music\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  ARIA role tabpanel is not allowed for given element"
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "tags": [
+          "cat.aria",
+          "wcag2a",
+          "wcag131",
+          "EN-301-549",
+          "EN-9.1.3.1",
+          "RGAAv4",
+          "RGAA-9.3.1"
+        ],
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "aria-required-children",
+                "data": {
+                  "messageKey": "unallowed",
+                  "values": "[role=tabpanel]"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-tv-show=\"brothers\" data-title=\"Brothers\" data-ac-gallery-item=\"\" data-analytics-galle...=\"brothers\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" aria-labelledby=\"endless-entertainmen...\" ...>",
+                    "target": [
+                      "li[data-tv-show=\"brothers\"]"
+                    ]
+                  }
+                ],
+                "impact": "critical",
+                "message": "Element has children which are not allowed: [role=tabpanel]"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "critical",
+            "html": "<ul class=\"media-gallery-item-container\" role=\"list\" style=\"transform: translate3d(0px, 0px, 0px);\">",
+            "target": [
+              "#tv-media-gallery > .media-gallery-item-container[role=\"list\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=tabpanel]"
+          },
+          {
+            "any": [
+              {
+                "id": "aria-required-children",
+                "data": {
+                  "messageKey": "unallowed",
+                  "values": "[role=tabpanel]"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-media-gallery-i...=\"music\" data-fam-music=\"sabrina carpenter: t...\" data-ac-gallery-item=\"\" data-analytics-galle...=\"sabrina carpenter: t...\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" ...>",
+                    "target": [
+                      ".current[data-media-gallery-item=\"1\"][data-media-gallery-item-service=\"music\"]"
+                    ]
+                  }
+                ],
+                "impact": "critical",
+                "message": "Element has children which are not allowed: [role=tabpanel]"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "critical",
+            "html": "<ul class=\"media-gallery-item-container\" role=\"list\" style=\"transform: translate3d(0px, 0px, 0px);\">",
+            "target": [
+              "#fam-media-gallery > .media-gallery-item-container[role=\"list\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=tabpanel]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f5f5f7",
+                  "bgColor": "#0071e3",
+                  "contrastRatio": 4.31,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"ribbon-content-wrapper\">",
+                    "target": [
+                      ".ribbon-content-wrapper"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 4.31 (foreground color: #f5f5f7, background color: #0071e3, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<span>Get 3 months of Apple&nbsp;One free with any new iPhone, iPad, or Mac.<sup class=\"footnote footnote-number\"><a href=\"#footnote-1\" aria-label=\"Footnote 1\">1</a></sup></span>",
+            "target": [
+              ".ribbon-content > span"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.31 (foreground color: #f5f5f7, background color: #0071e3, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#f5f5f7",
+                  "bgColor": "#0071e3",
+                  "contrastRatio": 4.31,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"ribbon-content-wrapper\">",
+                    "target": [
+                      ".ribbon-content-wrapper"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 4.31 (foreground color: #f5f5f7, background color: #0071e3, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<a class=\"ribbon-link more\" href=\"https://offers.appleone.apple/new-device-offer\" data-analytics-region=\"learn more\" data-analytics-title=\"learn more - apple one\" data-analytics-exit-link=\"\" rel=\"nofollow\" aria-label=\"Learn more, Apple One\">Learn more</a>",
+            "target": [
+              ".ribbon-link"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 4.31 (foreground color: #f5f5f7, background color: #0071e3, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#984d88",
+                  "bgColor": "#ee79d4",
+                  "contrastRatio": 2.21,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">Listen now</div>",
+                    "target": [
+                      "#media-gallery-item-4 > .media-gallery-contents > .media-gallery-bottom-content > .button-neutral.media-gallery-button.button"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 2.21 (foreground color: #984d88, background color: #ee79d4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">Listen now</div>",
+            "target": [
+              "#media-gallery-item-4 > .media-gallery-contents > .media-gallery-bottom-content > .button-neutral.media-gallery-button.button"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.21 (foreground color: #984d88, background color: #ee79d4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "region",
+        "impact": "moderate",
+        "tags": [
+          "cat.keyboard",
+          "best-practice",
+          "RGAAv4",
+          "RGAA-9.2.1"
+        ],
+        "description": "Ensure all page content is contained by landmarks",
+        "help": "All page content should be contained by landmarks",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "region",
+                "data": {
+                  "isIframe": false
+                },
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<h1 class=\"visuallyhidden\">Apple</h1>",
+            "target": [
+              "h1"
+            ],
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "page": "http://127.0.0.1:5500/",
     "violationCount": 4,
     "violations": [

@@ -33,7 +33,8 @@ function getWcagInfo(tags) {
 }
 
 test('Scan Multiple Pages', async ({page}) => {
-    const pages = ['http://127.0.0.1:5500/',
+    const pages = ['https://apple.com',
+        'http://127.0.0.1:5500/'
     ];
 
     let criticalCount = 0;
@@ -257,7 +258,7 @@ const summarySection = `
       }
 
     console.log("Accessibility Scan Started");
-    console.log("Report Created Successful");
+    console.log("Report Created Successfully");
 
 }
 );
