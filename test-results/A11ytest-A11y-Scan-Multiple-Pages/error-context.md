@@ -12,187 +12,187 @@
 # Error details
 
 ```
-Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 2
+Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 4
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=e1]:
-  - heading "Senior Accessibility Engineer" [level=1] [ref=e2]
-  - heading "Kumar Setty" [level=2] [ref=e3]
-  - heading "Nancy" [level=2] [ref=e4]
-  - paragraph [ref=e5]: Hi me and nancy collaborating for project related queries
-  - button "Cancel" [ref=e6]
-  - link "Google" [ref=e7] [cursor=pointer]:
+- generic [active] [ref=f1e1]:
+  - heading "Senior Accessibility Engineer" [level=1] [ref=f1e2]
+  - heading "Kumar Setty" [level=2] [ref=f1e3]
+  - heading "Nancy" [level=2] [ref=f1e4]
+  - paragraph [ref=f1e5]: Hi me and nancy collaborating for project related queries
+  - button "Cancel" [ref=f1e6]
+  - link "Google" [ref=f1e7] [cursor=pointer]:
     - /url: https:google.com
   - text: Company logo
-  - list [ref=e9]:
-    - listitem [ref=e10]: Nancy
-    - listitem [ref=e11]: Setty
-  - heading "Sample registration form" [level=1] [ref=e12]
+  - list [ref=f1e9]:
+    - listitem [ref=f1e10]: Nancy
+    - listitem [ref=f1e11]: Setty
+  - heading "Sample registration form" [level=1] [ref=f1e12]
   - text: "Full name* :"
-  - textbox "Full name* :" [ref=e13]:
+  - textbox "Full name* :" [ref=f1e13]:
     - /placeholder: Enter your full name
   - text: "Email* :"
-  - textbox "Email* :" [ref=e14]:
+  - textbox "Email* :" [ref=f1e14]:
     - /placeholder: Enter your email
   - text: "Password* :"
-  - 'textbox "Password* : Password" [ref=e15]':
+  - 'textbox "Password* : Password" [ref=f1e15]':
     - /placeholder: Enter your Password
   - text: Country*
-  - combobox "Country*" [ref=e16]:
+  - combobox "Country*" [ref=f1e16]:
     - option "India" [selected]
     - option "Pakistan"
     - option "Sri Lanka"
-  - paragraph [ref=e17]: "Skills :"
-  - checkbox "Java" [ref=e18]
+  - paragraph [ref=f1e17]: "Skills :"
+  - checkbox "Java" [ref=f1e18]
   - text: Java
-  - checkbox "HTML" [ref=e19]
+  - checkbox "HTML" [ref=f1e19]
   - text: HTML
-  - checkbox "Python" [ref=e20]
+  - checkbox "Python" [ref=f1e20]
   - text: Python
-  - paragraph [ref=e21]: "Gender* :"
-  - radio "Male" [ref=e22]
+  - paragraph [ref=f1e21]: "Gender* :"
+  - radio "Male" [ref=f1e22]
   - text: Male
-  - radio "Female" [ref=e23]
+  - radio "Female" [ref=f1e23]
   - text: Female
-  - radio "Others" [ref=e24]
+  - radio "Others" [ref=f1e24]
   - text: "Others Self Introduction* :"
-  - textbox "Self Introduction* :" [ref=e25]:
+  - textbox "Self Introduction* :" [ref=f1e25]:
     - /placeholder: Please provide you introduction
   - text: "Username*:"
-  - textbox "Username*:" [ref=e26]
-  - paragraph [ref=e27]: Minimum 6 characters.
+  - textbox "Username*:" [ref=f1e26]
+  - paragraph [ref=f1e27]: Minimum 6 characters.
   - text: Password
-  - textbox [ref=e28]
-  - paragraph [ref=e29]: "Must contain: - 8 characters - One uppercase letter - One number"
-  - button "Submit" [ref=e30]
-  - heading "Registration form" [level=1] [ref=e31]
+  - textbox [ref=f1e28]
+  - paragraph [ref=f1e29]: "Must contain: - 8 characters - One uppercase letter - One number"
+  - button "Submit" [ref=f1e30]
+  - heading "Registration form" [level=1] [ref=f1e31]
   - text: "Full Name*:"
-  - textbox "Full Name*:" [ref=e32]:
+  - textbox "Full Name*:" [ref=f1e32]:
     - /placeholder: Enter Full name
   - text: "Email1*:"
-  - textbox "Email1*:" [ref=e33]:
+  - textbox "Email1*:" [ref=f1e33]:
     - /placeholder: Enter Email1 address
-  - paragraph [ref=e34]: Email1 address should be in the format xxx@gmail.com.
-  - button "Search 🔍" [ref=e35]
-  - button "🔍 Search" [ref=e36]
-  - button "Click Me" [ref=e37]
+  - paragraph [ref=f1e34]: Email1 address should be in the format xxx@gmail.com.
+  - button "Search 🔍" [ref=f1e35]
+  - button "🔍 Search" [ref=f1e36]
+  - button "Click Me" [ref=f1e37]
 ```
 
 # Test source
 
 ```ts
-  154 |             ${v.helpUrl}
-  155 |             </a>
-  156 |             </p>
-  157 |             <p>
-  158 |             <strong> Affected Element:</strong></p>
-  159 |             ${v.nodes.map((node, nodeIndex) => `
-  160 |                 
-  161 |                 <p>
-  162 |                 <strong>Target:</strong>
-  163 |                 ${node.target.join(', ')}
-  164 |                 </p>
-  165 |                 <p>
-  166 |                 <strong>HTML Snippet:</strong>
-  167 |                 </p>
-  168 |                 <pre>
-  169 |                 ${node.html
-  170 |                     .replace(/</g, '&lt;')
-  171 |                     .replace(/>/g, '&gt;')
-  172 |                 }
-  173 |                 </pre>
-  174 |                 <p>
-  175 |                 <strong>Failure Summary:</strong>
-  176 |                 </p>
-  177 |                 <pre>
-  178 |                 ${node.failureSummary || 'N/A'}
-  179 |                 </pre>
-  180 |                 <p>
-  181 |                 <strong>Actual Result:</strong>
-  182 |                 </p>
-  183 |                 <pre>
-  184 |                 ${node.failureSummary || 'N/A'}
-  185 |                 </pre>
-  186 |                 <p>
-  187 |                 <strong>Fix Recommendation:</strong>
-  188 |                 </p>
-  189 |                 <p>Review and follow the remediation guidance:</p>
-  190 |                 <p>
-  191 |                 ${v.helpURL}
-  192 |                 </p>
-  193 |                 `).join('')
-  194 |             }
-  195 |             <hr>            
-  196 |             `;
-  197 |         });
-  198 |     }
-  199 | 
-  200 | });
-  201 | htmlContent += `
-  202 | </body>
-  203 | </html>
-  204 | `;
-  205 | 
-  206 | const totalViolations =
-  207 | criticalCount +
-  208 | seriousCount +
-  209 | moderateCount +
-  210 | minorCount;
-  211 | 
-  212 | let accessibilityScore =
-  213 |  100 - (
-  214 |     criticalCount * 10 +
-  215 |     seriousCount * 5 +
-  216 |     moderateCount * 2 +
-  217 |     minorCount * 1
-  218 |    );
-  219 |     
-  220 |     accessibilityScore =
-  221 |     Math.max(accessibilityScore, 0);
-  222 | 
-  223 | const summarySection = `
-  224 |    <h2>Accessibility Summary</h2>
-  225 |     <p><strong>Report ID:</strong> ${reportId}</p>
-  226 |     <p><strong>Application:</strong> ${applicationName}</p>
-  227 |     <p><strong>Scan Date:</strong> ${scanDate}</p>
-  228 |     <p><strong>Pages Scanned:</strong> ${pages.length}</p>
-  229 |     <p><strong>Total Violations:</strong> ${totalViolations}</p>
-  230 |     <p><strong>Critical:</strong> ${criticalCount}</p>
-  231 |     <p><strong>Serious:</strong> ${seriousCount}</p>
-  232 |     <p><strong>Moderate:</strong> ${moderateCount}</p>
-  233 |     <p><strong>Minor:</strong> ${minorCount}</p>
-  234 | 
-  235 |     <p>
-  236 |     <strong>Accessibility Score:</strong>
-  237 |       ${accessibilityScore}%
-  238 |     </p>
-  239 | 
-  240 |     <p>
-  241 |       <strong>Status:</strong>
-  242 |         ${
-  243 |             criticalCount > 0 ||
-  244 |             seriousCount > 0
-  245 |             ? 'FAIL'
-  246 |             : 'PASS'
-  247 |         }
-  248 |         </p>
-  249 |         <hr>
-  250 |     `;
-  251 |       htmlContent = summarySection + htmlContent;
-  252 |       fs.writeFileSync('a11y-report.html', htmlContent);
-  253 |       if (totalCriticalOrSeriousIssues > 0) {
-> 254 |         throw new Error(
-      |               ^ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 2
-  255 |             `Accessibility Quality Gate Failed. Critical/Serious Issues Found: ${totalCriticalOrSeriousIssues}`
-  256 |         );
-  257 |       }
-  258 | 
-  259 |     console.log("Accessibility Scan Started");
-  260 |     console.log("Report Created Successfully");
-  261 | 
-  262 | }
-  263 | );
+  155 |             ${v.helpUrl}
+  156 |             </a>
+  157 |             </p>
+  158 |             <p>
+  159 |             <strong> Affected Element:</strong></p>
+  160 |             ${v.nodes.map((node, nodeIndex) => `
+  161 |                 
+  162 |                 <p>
+  163 |                 <strong>Target:</strong>
+  164 |                 ${node.target.join(', ')}
+  165 |                 </p>
+  166 |                 <p>
+  167 |                 <strong>HTML Snippet:</strong>
+  168 |                 </p>
+  169 |                 <pre>
+  170 |                 ${node.html
+  171 |                     .replace(/</g, '&lt;')
+  172 |                     .replace(/>/g, '&gt;')
+  173 |                 }
+  174 |                 </pre>
+  175 |                 <p>
+  176 |                 <strong>Failure Summary:</strong>
+  177 |                 </p>
+  178 |                 <pre>
+  179 |                 ${node.failureSummary || 'N/A'}
+  180 |                 </pre>
+  181 |                 <p>
+  182 |                 <strong>Actual Result:</strong>
+  183 |                 </p>
+  184 |                 <pre>
+  185 |                 ${node.failureSummary || 'N/A'}
+  186 |                 </pre>
+  187 |                 <p>
+  188 |                 <strong>Fix Recommendation:</strong>
+  189 |                 </p>
+  190 |                 <p>Review and follow the remediation guidance:</p>
+  191 |                 <p>
+  192 |                 ${v.helpURL}
+  193 |                 </p>
+  194 |                 `).join('')
+  195 |             }
+  196 |             <hr>            
+  197 |             `;
+  198 |         });
+  199 |     }
+  200 | 
+  201 | });
+  202 | htmlContent += `
+  203 | </body>
+  204 | </html>
+  205 | `;
+  206 | 
+  207 | const totalViolations =
+  208 | criticalCount +
+  209 | seriousCount +
+  210 | moderateCount +
+  211 | minorCount;
+  212 | 
+  213 | let accessibilityScore =
+  214 |  100 - (
+  215 |     criticalCount * 10 +
+  216 |     seriousCount * 5 +
+  217 |     moderateCount * 2 +
+  218 |     minorCount * 1
+  219 |    );
+  220 |     
+  221 |     accessibilityScore =
+  222 |     Math.max(accessibilityScore, 0);
+  223 | 
+  224 | const summarySection = `
+  225 |    <h2>Accessibility Summary</h2>
+  226 |     <p><strong>Report ID:</strong> ${reportId}</p>
+  227 |     <p><strong>Application:</strong> ${applicationName}</p>
+  228 |     <p><strong>Scan Date:</strong> ${scanDate}</p>
+  229 |     <p><strong>Pages Scanned:</strong> ${pages.length}</p>
+  230 |     <p><strong>Total Violations:</strong> ${totalViolations}</p>
+  231 |     <p><strong>Critical:</strong> ${criticalCount}</p>
+  232 |     <p><strong>Serious:</strong> ${seriousCount}</p>
+  233 |     <p><strong>Moderate:</strong> ${moderateCount}</p>
+  234 |     <p><strong>Minor:</strong> ${minorCount}</p>
+  235 | 
+  236 |     <p>
+  237 |     <strong>Accessibility Score:</strong>
+  238 |       ${accessibilityScore}%
+  239 |     </p>
+  240 | 
+  241 |     <p>
+  242 |       <strong>Status:</strong>
+  243 |         ${
+  244 |             criticalCount > 0 ||
+  245 |             seriousCount > 0
+  246 |             ? 'FAIL'
+  247 |             : 'PASS'
+  248 |         }
+  249 |         </p>
+  250 |         <hr>
+  251 |     `;
+  252 |       htmlContent = summarySection + htmlContent;
+  253 |       fs.writeFileSync('a11y-report.html', htmlContent);
+  254 |       if (totalCriticalOrSeriousIssues > 0) {
+> 255 |         throw new Error(
+      |               ^ Error: Accessibility Quality Gate Failed. Critical/Serious Issues Found: 4
+  256 |             `Accessibility Quality Gate Failed. Critical/Serious Issues Found: ${totalCriticalOrSeriousIssues}`
+  257 |         );
+  258 |       }
+  259 | 
+  260 |     console.log("Accessibility Scan Started");
+  261 |     console.log("Report Created Successfully");
+  262 | 
+  263 | }
+  264 | );
 ```
