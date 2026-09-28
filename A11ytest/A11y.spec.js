@@ -34,7 +34,6 @@ function getWcagInfo(tags) {
 
 test('Scan Multiple Pages', async ({page}) => {
     const pages = ['https://apple.com',
-        'http://127.0.0.1:5500/'
     ];
 
     let criticalCount = 0;

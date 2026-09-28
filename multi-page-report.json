@@ -558,7 +558,7 @@
             "all": [],
             "none": [],
             "impact": "moderate",
-            "html": "<p>Hi me and nancy collaborating for project related queries </p>",
+            "html": "<p>Hi, me and nancy collaborating for project related queries </p>",
             "target": [
               "p:nth-child(4)"
             ],
