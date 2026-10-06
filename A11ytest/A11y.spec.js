@@ -33,7 +33,7 @@ function getWcagInfo(tags) {
 }
 
 test('Scan Multiple Pages', async ({page}) => {
-    const pages = ['http://127.0.0.1:5500/index.html',
+    const pages = ['http://127.0.0.1:5501/index.html',
     ];
 
     let criticalCount = 0;
