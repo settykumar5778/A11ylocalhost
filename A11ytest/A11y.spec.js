@@ -91,10 +91,9 @@ test('Scan Multiple Pages', async ({page}) => {
                         element.style.backgroundColor = 'yellow';
                     });
                     
-                    await page.screenshot({
+                    await locator.screenshot({
                         path:
-                        `screenshots/issues/${violation.id}-${i+1}.png`,
-                        fullpage: true
+                        `screenshots/issues/${violation.id}-${i+1}-element.png`,
                     });
                 }
                 catch (error) {
