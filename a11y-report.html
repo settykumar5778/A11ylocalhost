@@ -1,18 +1,18 @@
 
    <h2>Accessibility Summary</h2>
-    <p><strong>Report ID:</strong> A11y-1790685053288</p>
+    <p><strong>Report ID:</strong> A11y-1791271368618</p>
     <p><strong>Application:</strong> Apple Accessibility Scan</p>
-    <p><strong>Scan Date:</strong> 29/9/2026, 6:00:53 pm</p>
+    <p><strong>Scan Date:</strong> 6/10/2026, 12:52:48 pm</p>
     <p><strong>Pages Scanned:</strong> 1</p>
     <p><strong>Total Violations:</strong> 4</p>
     <p><strong>Critical:</strong> 1</p>
     <p><strong>Serious:</strong> 1</p>
-    <p><strong>Moderate:</strong> 1</p>
-    <p><strong>Minor:</strong> 1</p>
+    <p><strong>Moderate:</strong> 2</p>
+    <p><strong>Minor:</strong> 0</p>
 
     <p>
     <strong>Accessibility Score:</strong>
-      82%
+      81%
     </p>
 
     <p>
@@ -28,7 +28,7 @@
 <body>
 <h1>Accessibility Report</h1>
 
-    <h2>Page: https://apple.com</h2>
+    <h2>Page: http://127.0.0.1:5500/index.html</h2>
     <p>
        <strong>Total Violations: </strong>
          undefined
@@ -39,10 +39,168 @@
     </p>   
 
     
-            <h3>Issue 1 - aria-allowed-role</h3>
+            <h3>Issue 1 - html-has-lang</h3>
             <p>
             <strong>Impact: </strong>
-            minor
+            serious
+            </p>
+            <p>
+            <strong>Success Criteria:</strong>
+            3.1.1
+            </p>
+            <p>
+            <strong>WCAG Level: </strong>
+            A
+            </p>
+            <p>
+            <strong>Description:</strong>
+            Ensure every HTML document has a lang attribute
+            </p>
+            <p>
+            <strong>Expected Result:</strong>
+            <html> element must have a lang attribute.
+            </p>
+            <p>
+            <strong>Help:</strong>
+            <html> element must have a lang attribute
+            </p>
+            <p>
+            <strong>Help URL:</strong>
+            https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=playwright
+            https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=playwright
+            </a>
+            </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                html
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;html&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  The <html> element does not have a lang attribute
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                html-has-lang-1.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  The <html> element does not have a lang attribute
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+            <hr>            
+            
+            <h3>Issue 2 - image-alt</h3>
+            <p>
+            <strong>Impact: </strong>
+            critical
+            </p>
+            <p>
+            <strong>Success Criteria:</strong>
+            1.1.1
+            </p>
+            <p>
+            <strong>WCAG Level: </strong>
+            A
+            </p>
+            <p>
+            <strong>Description:</strong>
+            Ensure <img> elements have alternative text or a role of none or presentation
+            </p>
+            <p>
+            <strong>Expected Result:</strong>
+            Images must have alternative text.
+            </p>
+            <p>
+            <strong>Help:</strong>
+            Images must have alternative text
+            </p>
+            <p>
+            <strong>Help URL:</strong>
+            https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright
+            https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright
+            </a>
+            </p>
+            <p>
+            <strong> Affected Element:</strong></p>
+            
+                
+                <p>
+                <strong>Target:</strong>
+                img
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;img src="logo.png" alt-text="Company" logo=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Element does not have an alt attribute
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute
+  Element's default semantics were not overridden with role="none" or role="presentation"
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                image-alt-1.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Element does not have an alt attribute
+  aria-label attribute does not exist or is empty
+  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty
+  Element has no title attribute
+  Element's default semantics were not overridden with role="none" or role="presentation"
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+            <hr>            
+            
+            <h3>Issue 3 - landmark-one-main</h3>
+            <p>
+            <strong>Impact: </strong>
+            moderate
             </p>
             <p>
             <strong>Success Criteria:</strong>
@@ -54,20 +212,20 @@
             </p>
             <p>
             <strong>Description:</strong>
-            Ensure role attribute has an appropriate value for the element
+            Ensure the document has a main landmark
             </p>
             <p>
             <strong>Expected Result:</strong>
-            ARIA role should be appropriate for the element.
+            Document should have one main landmark.
             </p>
             <p>
             <strong>Help:</strong>
-            ARIA role should be appropriate for the element
+            Document should have one main landmark
             </p>
             <p>
             <strong>Help URL:</strong>
-            https://dequeuniversity.com/rules/axe/4.13/aria-allowed-role?application=playwright
-            https://dequeuniversity.com/rules/axe/4.13/aria-allowed-role?application=playwright
+            https://dequeuniversity.com/rules/axe/4.13/landmark-one-main?application=playwright
+            https://dequeuniversity.com/rules/axe/4.13/landmark-one-main?application=playwright
             </a>
             </p>
             <p>
@@ -76,300 +234,33 @@
                 
                 <p>
                 <strong>Target:</strong>
-                #apple-upgrade
+                html
                 </p>
                 <p>
                 <strong>HTML Snippet:</strong>
                 </p>
                 <pre>
-                &lt;video id="apple-upgrade" muted="" preload="none" playsinline="" data-inline-media-ba...="/105/media/us/home/2..." data-inline-media-pl...="{"start":"t - (100vh..." aria-label="Apple Upgrade, iPhon..." role="img" src="/105/media/us/home/2..."&gt;
+                &lt;html&gt;
                 </pre>
                 <p>
                 <strong>Failure Summary:</strong>
                 </p>
                 <pre>
-                Fix any of the following:
-  ARIA role img is not allowed for given element
+                Fix all of the following:
+  Document does not have a main landmark
                 </pre>
                 <p>
                 <strong>Issue Screenshot:</strong>
                 </p>
                 <p>
-                aria-allowed-role-1.png
+                landmark-one-main-1.png
                 </p>
                 <p>
                 <strong>Actual Result:</strong>
                 </p>
                 <pre>
-                Fix any of the following:
-  ARIA role img is not allowed for given element
-                </pre>
-                <p>
-                <strong>Fix Recommendation:</strong>
-                </p>
-                <p>Review and follow the remediation guidance:</p>
-                <p>
-                undefined
-                </p>
-                
-                
-                <p>
-                <strong>Target:</strong>
-                li[data-tv-show="brothers"]
-                </p>
-                <p>
-                <strong>HTML Snippet:</strong>
-                </p>
-                <pre>
-                &lt;li id="endless-entertainmen..." class="media-gallery-item t..." data-media-gallery-i...="1" data-tv-show="brothers" data-title="Brothers" data-ac-gallery-item="" data-analytics-galle...="brothers" data-ac-gallery-item...="4.16" role="tabpanel" aria-labelledby="endless-entertainmen..." ...&gt;
-                </pre>
-                <p>
-                <strong>Failure Summary:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  ARIA role tabpanel is not allowed for given element
-                </pre>
-                <p>
-                <strong>Issue Screenshot:</strong>
-                </p>
-                <p>
-                aria-allowed-role-2.png
-                </p>
-                <p>
-                <strong>Actual Result:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  ARIA role tabpanel is not allowed for given element
-                </pre>
-                <p>
-                <strong>Fix Recommendation:</strong>
-                </p>
-                <p>Review and follow the remediation guidance:</p>
-                <p>
-                undefined
-                </p>
-                
-                
-                <p>
-                <strong>Target:</strong>
-                li[data-fam-arcade="hello kitty island adventure"]
-                </p>
-                <p>
-                <strong>HTML Snippet:</strong>
-                </p>
-                <pre>
-                &lt;li id="endless-entertainmen..." class="media-gallery-item t..." data-media-gallery-i...="1" data-media-gallery-i...="arcade" data-fam-arcade="hello kitty island a..." data-ac-gallery-item="" data-analytics-galle...="hello kitty island a..." data-ac-gallery-item...="4.16" role="tabpanel" ...&gt;
-                </pre>
-                <p>
-                <strong>Failure Summary:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  ARIA role tabpanel is not allowed for given element
-                </pre>
-                <p>
-                <strong>Issue Screenshot:</strong>
-                </p>
-                <p>
-                aria-allowed-role-3.png
-                </p>
-                <p>
-                <strong>Actual Result:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  ARIA role tabpanel is not allowed for given element
-                </pre>
-                <p>
-                <strong>Fix Recommendation:</strong>
-                </p>
-                <p>Review and follow the remediation guidance:</p>
-                <p>
-                undefined
-                </p>
-                
-            <hr>            
-            
-            <h3>Issue 2 - aria-required-children</h3>
-            <p>
-            <strong>Impact: </strong>
-            critical
-            </p>
-            <p>
-            <strong>Success Criteria:</strong>
-            1.3.1
-            </p>
-            <p>
-            <strong>WCAG Level: </strong>
-            A
-            </p>
-            <p>
-            <strong>Description:</strong>
-            Ensure elements with an ARIA role that require child roles contain them
-            </p>
-            <p>
-            <strong>Expected Result:</strong>
-            Certain ARIA roles must contain particular children.
-            </p>
-            <p>
-            <strong>Help:</strong>
-            Certain ARIA roles must contain particular children
-            </p>
-            <p>
-            <strong>Help URL:</strong>
-            https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=playwright
-            https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=playwright
-            </a>
-            </p>
-            <p>
-            <strong> Affected Element:</strong></p>
-            
-                
-                <p>
-                <strong>Target:</strong>
-                #tv-media-gallery > .media-gallery-item-container[role="list"]
-                </p>
-                <p>
-                <strong>HTML Snippet:</strong>
-                </p>
-                <pre>
-                &lt;ul class="media-gallery-item-container" role="list" style="transform: translate3d(0px, 0px, 0px);"&gt;
-                </pre>
-                <p>
-                <strong>Failure Summary:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  Element has children which are not allowed: [role=tabpanel]
-                </pre>
-                <p>
-                <strong>Issue Screenshot:</strong>
-                </p>
-                <p>
-                aria-required-children-1.png
-                </p>
-                <p>
-                <strong>Actual Result:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  Element has children which are not allowed: [role=tabpanel]
-                </pre>
-                <p>
-                <strong>Fix Recommendation:</strong>
-                </p>
-                <p>Review and follow the remediation guidance:</p>
-                <p>
-                undefined
-                </p>
-                
-                
-                <p>
-                <strong>Target:</strong>
-                #fam-media-gallery > .media-gallery-item-container[role="list"]
-                </p>
-                <p>
-                <strong>HTML Snippet:</strong>
-                </p>
-                <pre>
-                &lt;ul class="media-gallery-item-container" role="list" style="transform: translate3d(0px, 0px, 0px);"&gt;
-                </pre>
-                <p>
-                <strong>Failure Summary:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  Element has children which are not allowed: [role=tabpanel]
-                </pre>
-                <p>
-                <strong>Issue Screenshot:</strong>
-                </p>
-                <p>
-                aria-required-children-2.png
-                </p>
-                <p>
-                <strong>Actual Result:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  Element has children which are not allowed: [role=tabpanel]
-                </pre>
-                <p>
-                <strong>Fix Recommendation:</strong>
-                </p>
-                <p>Review and follow the remediation guidance:</p>
-                <p>
-                undefined
-                </p>
-                
-            <hr>            
-            
-            <h3>Issue 3 - color-contrast</h3>
-            <p>
-            <strong>Impact: </strong>
-            serious
-            </p>
-            <p>
-            <strong>Success Criteria:</strong>
-            1.4.3
-            </p>
-            <p>
-            <strong>WCAG Level: </strong>
-            AA
-            </p>
-            <p>
-            <strong>Description:</strong>
-            Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
-            </p>
-            <p>
-            <strong>Expected Result:</strong>
-            Elements must meet minimum color contrast ratio thresholds.
-            </p>
-            <p>
-            <strong>Help:</strong>
-            Elements must meet minimum color contrast ratio thresholds
-            </p>
-            <p>
-            <strong>Help URL:</strong>
-            https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright
-            https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright
-            </a>
-            </p>
-            <p>
-            <strong> Affected Element:</strong></p>
-            
-                
-                <p>
-                <strong>Target:</strong>
-                #media-gallery-item-5 > .media-gallery-contents > .media-gallery-bottom-content > .button-neutral.media-gallery-button.button
-                </p>
-                <p>
-                <strong>HTML Snippet:</strong>
-                </p>
-                <pre>
-                &lt;div class="button button-neutral media-gallery-button" aria-hidden="true"&gt;Listen now&lt;/div&gt;
-                </pre>
-                <p>
-                <strong>Failure Summary:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  Element has insufficient color contrast of 2.33 (foreground color: #937554, background color: #e6b784, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
-                </pre>
-                <p>
-                <strong>Issue Screenshot:</strong>
-                </p>
-                <p>
-                color-contrast-1.png
-                </p>
-                <p>
-                <strong>Actual Result:</strong>
-                </p>
-                <pre>
-                Fix any of the following:
-  Element has insufficient color contrast of 2.33 (foreground color: #937554, background color: #e6b784, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1
+                Fix all of the following:
+  Document does not have a main landmark
                 </pre>
                 <p>
                 <strong>Fix Recommendation:</strong>
@@ -418,13 +309,13 @@
                 
                 <p>
                 <strong>Target:</strong>
-                h1
+                h1:nth-child(1)
                 </p>
                 <p>
                 <strong>HTML Snippet:</strong>
                 </p>
                 <pre>
-                &lt;h1 class="visuallyhidden"&gt;Apple&lt;/h1&gt;
+                &lt;h1&gt;Senior Accessibility Engineer &lt;/h1&gt;
                 </pre>
                 <p>
                 <strong>Failure Summary:</strong>
@@ -438,6 +329,1896 @@
                 </p>
                 <p>
                 region-1.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                h2:nth-child(2)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h2&gt;Kumar Setty &lt;/h2&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-2.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                h2:nth-child(3)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h2&gt;Nancy &lt;/h2&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-3.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                p:nth-child(4)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p&gt;Hi, me and nancy collaborating for project related queries &lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-4.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                a[href$="https:google.com"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;a href="https:google.com"&gt; Google &lt;/a&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-5.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                img
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;img src="logo.png" alt-text="Company" logo=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-6.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                ol
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;ol&gt;
+&lt;li&gt;Nancy&lt;/li&gt;
+&lt;li&gt;Setty&lt;/li&gt;
+&lt;/ol&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-7.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                h1:nth-child(10)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h1&gt;Sample registration form&lt;/h1&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-8.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="full name"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="full name"&gt;Full name* :&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-9.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                input[placeholder="Enter your full name"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input id="full name" required="" type="text" placeholder="Enter your full name" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-10.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="email"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="email" required=""&gt;Email* :&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-11.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #email
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input id="email" type="email" placeholder="Enter your email" required="" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-12.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="password"][required=""]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="password" required=""&gt; Password* :&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-13.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                input[placeholder="Enter your Password"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input id="password" type="password" placeholder="Enter your Password" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-14.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Country"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Country" required=""&gt;Country*&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-15.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Country
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;select id="Country"&gt;
+&lt;option&gt;India&lt;/option&gt;
+&lt;option&gt;Pakistan&lt;/option&gt;
+&lt;option&gt;Sri Lanka&lt;/option&gt;
+&lt;/select&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-16.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                p:nth-child(23)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p&gt;Skills :&lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-17.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Java
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="Checkbox" id="Java" name="Skills :" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-18.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Java"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Java"&gt;Java &lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-19.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #HTML
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input id="HTML" type="Checkbox" name="Skills :" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-20.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="HTML"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="HTML"&gt;HTML &lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-21.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Python
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input id="Python" type="Checkbox" name="Skills :" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-22.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Python"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Python"&gt;Python &lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-23.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                p:nth-child(31)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p&gt;Gender* :&lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-24.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Male
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="radio" id="Male" name="Gender* :" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-25.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Male"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Male"&gt;Male&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-26.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Female
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="radio" id="Female" name="Gender* :" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-27.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Female"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Female"&gt;Female&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-28.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Others
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="radio" id="Others" name="Gender* :" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-29.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Others"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Others"&gt;Others&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-30.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Self"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Self" required=""&gt;Self Introduction* :&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-31.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Self
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;textarea id="Self" placeholder="Please provide you introduction" style=""&gt;&lt;/textarea&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-32.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="username"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="username"&gt;
+Username*:
+&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-33.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #username
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="Text" id="username" aria-describedby="usernameHint" required="" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-34.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #usernameHint
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p id="usernameHint"&gt;
+Minimum 6 characters.
+&lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-35.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="password"]:nth-child(45)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="password"&gt;
+Password
+&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-36.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                input[aria-describedby="pwdHint"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="password" id="password" aria-describedby="pwdHint" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-37.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #pwdHint
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p id="pwdHint"&gt;
+Must contain:
+- 8 characters
+- One uppercase letter
+- One number
+&lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-38.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                h1:nth-child(50)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;h1&gt;Registration form&lt;/h1&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-39.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Full Name"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Full Name"&gt;Full Name*:&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-40.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                input[placeholder="Enter Full name"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="text" id="Full Name" required="" placeholder="Enter Full name" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-41.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                label[for="Email1"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;label for="Email1"&gt;Email1*:&lt;/label&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-42.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #Email1
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="Email" id="Email1" required="" aria-describedby="emailint" placeholder="Enter Email1 address" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-43.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                #emailint
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p id="emailint"&gt;Email1 address should be in the format xxx@gmail.com.&lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-44.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                p:nth-child(61)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p&gt;Hi everyone this page is practice purpose only &lt;a href="https:apple.com"&gt;test&lt;/a&gt;&lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-45.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                strong
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;strong&gt;&lt;u&gt;Feedback:&lt;/u&gt;&lt;/strong&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-46.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                p:nth-child(66)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;p&gt;Please provide your feedback&lt;/p&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-47.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                input[type="email"][placeholder="Enter your email"][required=""]:nth-child(67)
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;input type="email" placeholder="Enter your email" required="" style=""&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-48.png
+                </p>
+                <p>
+                <strong>Actual Result:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Fix Recommendation:</strong>
+                </p>
+                <p>Review and follow the remediation guidance:</p>
+                <p>
+                undefined
+                </p>
+                
+                
+                <p>
+                <strong>Target:</strong>
+                textarea[placeholder="provide your feedback"]
+                </p>
+                <p>
+                <strong>HTML Snippet:</strong>
+                </p>
+                <pre>
+                &lt;textarea placeholder="provide your feedback" style=""&gt;&lt;/textarea&gt;
+                </pre>
+                <p>
+                <strong>Failure Summary:</strong>
+                </p>
+                <pre>
+                Fix any of the following:
+  Some page content is not contained by landmarks
+                </pre>
+                <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                region-49.png
                 </p>
                 <p>
                 <strong>Actual Result:</strong>
