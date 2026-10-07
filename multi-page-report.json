@@ -1,152 +1,246 @@
 [
   {
-    "page": "http://127.0.0.1:5500/index.html",
+    "page": "http://apple.com",
     "violationCount": 4,
     "violations": [
       {
-        "id": "html-has-lang",
-        "impact": "serious",
+        "id": "aria-allowed-role",
+        "impact": "minor",
         "tags": [
-          "cat.language",
-          "wcag2a",
-          "wcag311",
-          "TTv5",
-          "TT11.a",
-          "EN-301-549",
-          "EN-9.3.1.1",
-          "ACT",
-          "RGAAv4",
-          "RGAA-8.3.1"
+          "cat.aria",
+          "best-practice"
         ],
-        "description": "Ensure every HTML document has a lang attribute",
-        "help": "<html> element must have a lang attribute",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=playwright",
+        "description": "Ensure role attribute has an appropriate value for the element",
+        "help": "ARIA role should be appropriate for the element",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-role?application=playwright",
         "nodes": [
           {
             "any": [
               {
-                "id": "has-lang",
-                "data": {
-                  "messageKey": "noLang"
-                },
+                "id": "aria-allowed-role",
+                "data": [
+                  "img"
+                ],
                 "relatedNodes": [],
-                "impact": "serious",
-                "message": "The <html> element does not have a lang attribute"
+                "impact": "minor",
+                "message": "ARIA role img is not allowed for given element"
               }
             ],
             "all": [],
             "none": [],
-            "impact": "serious",
-            "html": "<html>",
+            "impact": "minor",
+            "html": "<video id=\"apple-upgrade\" muted=\"\" preload=\"none\" playsinline=\"\" data-inline-media-ba...=\"/105/media/us/home/2...\" data-inline-media-pl...=\"{\"start\":\"t - (100vh...\" aria-label=\"Apple Upgrade, iPhon...\" role=\"img\" src=\"/105/media/us/home/2...\">",
             "target": [
-              "html"
+              "#apple-upgrade"
             ],
-            "failureSummary": "Fix any of the following:\n  The <html> element does not have a lang attribute"
+            "failureSummary": "Fix any of the following:\n  ARIA role img is not allowed for given element"
+          },
+          {
+            "any": [
+              {
+                "id": "aria-allowed-role",
+                "data": [
+                  "tabpanel"
+                ],
+                "relatedNodes": [],
+                "impact": "minor",
+                "message": "ARIA role tabpanel is not allowed for given element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "minor",
+            "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-tv-show=\"brothers\" data-title=\"Brothers\" data-ac-gallery-item=\"\" data-analytics-galle...=\"brothers\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" aria-labelledby=\"endless-entertainmen...\" ...>",
+            "target": [
+              "li[data-tv-show=\"brothers\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  ARIA role tabpanel is not allowed for given element"
+          },
+          {
+            "any": [
+              {
+                "id": "aria-allowed-role",
+                "data": [
+                  "tabpanel"
+                ],
+                "relatedNodes": [],
+                "impact": "minor",
+                "message": "ARIA role tabpanel is not allowed for given element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "minor",
+            "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-media-gallery-i...=\"fitness\" data-fam-fitness=\"join the team with “...\" data-ac-gallery-item=\"\" data-analytics-galle...=\"join the team with “...\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" ...>",
+            "target": [
+              "li[data-fam-fitness=\"join the team with “ted lasso”\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  ARIA role tabpanel is not allowed for given element"
           }
         ]
       },
       {
-        "id": "image-alt",
+        "id": "aria-required-children",
         "impact": "critical",
         "tags": [
-          "cat.text-alternatives",
+          "cat.aria",
           "wcag2a",
-          "wcag111",
-          "section508",
-          "section508.22.a",
-          "TTv5",
-          "TT7.a",
-          "TT7.b",
+          "wcag131",
           "EN-301-549",
-          "EN-9.1.1.1",
-          "ACT",
+          "EN-9.1.3.1",
           "RGAAv4",
-          "RGAA-1.1.1"
+          "RGAA-9.3.1"
         ],
-        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
-        "help": "Images must have alternative text",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=playwright",
         "nodes": [
           {
             "any": [
               {
-                "id": "has-alt",
-                "data": null,
-                "relatedNodes": [],
-                "impact": "critical",
-                "message": "Element does not have an alt attribute"
-              },
-              {
-                "id": "aria-label",
-                "data": null,
-                "relatedNodes": [],
-                "impact": "critical",
-                "message": "aria-label attribute does not exist or is empty"
-              },
-              {
-                "id": "aria-labelledby",
-                "data": null,
-                "relatedNodes": [],
-                "impact": "critical",
-                "message": "aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty"
-              },
-              {
-                "id": "non-empty-title",
+                "id": "aria-required-children",
                 "data": {
-                  "messageKey": "noAttr"
+                  "messageKey": "unallowed",
+                  "values": "[role=tabpanel]"
                 },
-                "relatedNodes": [],
+                "relatedNodes": [
+                  {
+                    "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-tv-show=\"brothers\" data-title=\"Brothers\" data-ac-gallery-item=\"\" data-analytics-galle...=\"brothers\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" aria-labelledby=\"endless-entertainmen...\" ...>",
+                    "target": [
+                      "li[data-tv-show=\"brothers\"]"
+                    ]
+                  }
+                ],
                 "impact": "critical",
-                "message": "Element has no title attribute"
-              },
-              {
-                "id": "presentational-role",
-                "data": null,
-                "relatedNodes": [],
-                "impact": "critical",
-                "message": "Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+                "message": "Element has children which are not allowed: [role=tabpanel]"
               }
             ],
             "all": [],
             "none": [],
             "impact": "critical",
-            "html": "<img src=\"logo.png\" alt-text=\"Company\" logo=\"\">",
+            "html": "<ul class=\"media-gallery-item-container\" role=\"list\" style=\"transform: translate3d(0px, 0px, 0px);\">",
             "target": [
-              "img"
+              "#tv-media-gallery > .media-gallery-item-container[role=\"list\"]"
             ],
-            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=tabpanel]"
+          },
+          {
+            "any": [
+              {
+                "id": "aria-required-children",
+                "data": {
+                  "messageKey": "unallowed",
+                  "values": "[role=tabpanel]"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<li id=\"endless-entertainmen...\" class=\"media-gallery-item t...\" data-media-gallery-i...=\"1\" data-media-gallery-i...=\"fitness\" data-fam-fitness=\"join the team with “...\" data-ac-gallery-item=\"\" data-analytics-galle...=\"join the team with “...\" data-ac-gallery-item...=\"4.16\" role=\"tabpanel\" ...>",
+                    "target": [
+                      "li[data-fam-fitness=\"join the team with “ted lasso”\"]"
+                    ]
+                  }
+                ],
+                "impact": "critical",
+                "message": "Element has children which are not allowed: [role=tabpanel]"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "critical",
+            "html": "<ul class=\"media-gallery-item-container\" role=\"list\" style=\"transform: translate3d(0px, 0px, 0px);\">",
+            "target": [
+              "#fam-media-gallery > .media-gallery-item-container[role=\"list\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: [role=tabpanel]"
           }
         ]
       },
       {
-        "id": "landmark-one-main",
-        "impact": "moderate",
+        "id": "color-contrast",
+        "impact": "serious",
         "tags": [
-          "cat.semantics",
-          "best-practice"
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
         ],
-        "description": "Ensure the document has a main landmark",
-        "help": "Document should have one main landmark",
-        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-one-main?application=playwright",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
         "nodes": [
           {
-            "any": [],
-            "all": [
+            "any": [
               {
-                "id": "page-has-main",
-                "data": null,
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Document does not have a main landmark"
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#383839",
+                  "bgColor": "#585859",
+                  "contrastRatio": 1.64,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">Listen now</div>",
+                    "target": [
+                      "#media-gallery-item-3 > .media-gallery-contents > .media-gallery-bottom-content > .button-neutral.media-gallery-button.button"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
               }
             ],
+            "all": [],
             "none": [],
-            "impact": "moderate",
-            "html": "<html>",
+            "impact": "serious",
+            "html": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">Listen now</div>",
             "target": [
-              "html"
+              "#media-gallery-item-3 > .media-gallery-contents > .media-gallery-bottom-content > .button-neutral.media-gallery-button.button"
             ],
-            "failureSummary": "Fix all of the following:\n  Document does not have a main landmark"
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.64 (foreground color: #383839, background color: #585859, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "fgColor": "#684783",
+                  "bgColor": "#a26fcd",
+                  "contrastRatio": 2.01,
+                  "fontSize": "10.5pt (14px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">Listen now</div>",
+                    "target": [
+                      "#media-gallery-item-6 > .media-gallery-contents > .media-gallery-bottom-content > .button-neutral.media-gallery-button.button"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element has insufficient color contrast of 2.01 (foreground color: #684783, background color: #a26fcd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<div class=\"button button-neutral media-gallery-button\" aria-hidden=\"true\">Listen now</div>",
+            "target": [
+              "#media-gallery-item-6 > .media-gallery-contents > .media-gallery-bottom-content > .button-neutral.media-gallery-button.button"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.01 (foreground color: #684783, background color: #a26fcd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
           }
         ]
       },
@@ -178,1017 +272,9 @@
             "all": [],
             "none": [],
             "impact": "moderate",
-            "html": "<h1>Senior Accessibility Engineer </h1>",
+            "html": "<h1 class=\"visuallyhidden\">Apple</h1>",
             "target": [
-              "h1:nth-child(1)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<h2>Kumar Setty </h2>",
-            "target": [
-              "h2:nth-child(2)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<h2>Nancy </h2>",
-            "target": [
-              "h2:nth-child(3)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p>Hi, me and nancy collaborating for project related queries </p>",
-            "target": [
-              "p:nth-child(4)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<a href=\"https:google.com\"> Google </a>",
-            "target": [
-              "a[href$=\"https:google.com\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<img src=\"logo.png\" alt-text=\"Company\" logo=\"\">",
-            "target": [
-              "img"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<ol>\n<li>Nancy</li>\n<li>Setty</li>\n</ol>",
-            "target": [
-              "ol"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<h1>Sample registration form</h1>",
-            "target": [
-              "h1:nth-child(10)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"full name\">Full name* :</label>",
-            "target": [
-              "label[for=\"full name\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input id=\"full name\" required=\"\" type=\"text\" placeholder=\"Enter your full name\" style=\"\">",
-            "target": [
-              "input[placeholder=\"Enter your full name\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"email\" required=\"\">Email* :</label>",
-            "target": [
-              "label[for=\"email\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input id=\"email\" type=\"email\" placeholder=\"Enter your email\" required=\"\" style=\"\">",
-            "target": [
-              "#email"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"password\" required=\"\"> Password* :</label>",
-            "target": [
-              "label[for=\"password\"][required=\"\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input id=\"password\" type=\"password\" placeholder=\"Enter your Password\" style=\"\">",
-            "target": [
-              "input[placeholder=\"Enter your Password\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Country\" required=\"\">Country*</label>",
-            "target": [
-              "label[for=\"Country\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<select id=\"Country\">\n<option>India</option>\n<option>Pakistan</option>\n<option>Sri Lanka</option>\n</select>",
-            "target": [
-              "#Country"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p>Skills :</p>",
-            "target": [
-              "p:nth-child(23)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"Checkbox\" id=\"Java\" name=\"Skills :\" style=\"\">",
-            "target": [
-              "#Java"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Java\">Java </label>",
-            "target": [
-              "label[for=\"Java\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input id=\"HTML\" type=\"Checkbox\" name=\"Skills :\" style=\"\">",
-            "target": [
-              "#HTML"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"HTML\">HTML </label>",
-            "target": [
-              "label[for=\"HTML\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input id=\"Python\" type=\"Checkbox\" name=\"Skills :\" style=\"\">",
-            "target": [
-              "#Python"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Python\">Python </label>",
-            "target": [
-              "label[for=\"Python\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p>Gender* :</p>",
-            "target": [
-              "p:nth-child(31)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"radio\" id=\"Male\" name=\"Gender* :\" style=\"\">",
-            "target": [
-              "#Male"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Male\">Male</label>",
-            "target": [
-              "label[for=\"Male\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"radio\" id=\"Female\" name=\"Gender* :\" style=\"\">",
-            "target": [
-              "#Female"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Female\">Female</label>",
-            "target": [
-              "label[for=\"Female\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"radio\" id=\"Others\" name=\"Gender* :\" style=\"\">",
-            "target": [
-              "#Others"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Others\">Others</label>",
-            "target": [
-              "label[for=\"Others\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Self\" required=\"\">Self Introduction* :</label>",
-            "target": [
-              "label[for=\"Self\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<textarea id=\"Self\" placeholder=\"Please provide you introduction\" style=\"\"></textarea>",
-            "target": [
-              "#Self"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"username\">\nUsername*:\n</label>",
-            "target": [
-              "label[for=\"username\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"Text\" id=\"username\" aria-describedby=\"usernameHint\" required=\"\" style=\"\">",
-            "target": [
-              "#username"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p id=\"usernameHint\">\nMinimum 6 characters.\n</p>",
-            "target": [
-              "#usernameHint"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"password\">\nPassword\n</label>",
-            "target": [
-              "label[for=\"password\"]:nth-child(45)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"password\" id=\"password\" aria-describedby=\"pwdHint\" style=\"\">",
-            "target": [
-              "input[aria-describedby=\"pwdHint\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p id=\"pwdHint\">\nMust contain:\n- 8 characters\n- One uppercase letter\n- One number\n</p>",
-            "target": [
-              "#pwdHint"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<h1>Registration form</h1>",
-            "target": [
-              "h1:nth-child(50)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Full Name\">Full Name*:</label>",
-            "target": [
-              "label[for=\"Full Name\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"text\" id=\"Full Name\" required=\"\" placeholder=\"Enter Full name\" style=\"\">",
-            "target": [
-              "input[placeholder=\"Enter Full name\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<label for=\"Email1\">Email1*:</label>",
-            "target": [
-              "label[for=\"Email1\"]"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"Email\" id=\"Email1\" required=\"\" aria-describedby=\"emailint\" placeholder=\"Enter Email1 address\" style=\"\">",
-            "target": [
-              "#Email1"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p id=\"emailint\">Email1 address should be in the format xxx@gmail.com.</p>",
-            "target": [
-              "#emailint"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p>Hi everyone this page is practice purpose only <a href=\"https:apple.com\">test</a></p>",
-            "target": [
-              "p:nth-child(61)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<strong><u>Feedback:</u></strong>",
-            "target": [
-              "strong"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<p>Please provide your feedback</p>",
-            "target": [
-              "p:nth-child(66)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<input type=\"email\" placeholder=\"Enter your email\" required=\"\" style=\"\">",
-            "target": [
-              "input[type=\"email\"][placeholder=\"Enter your email\"][required=\"\"]:nth-child(67)"
-            ],
-            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
-          },
-          {
-            "any": [
-              {
-                "id": "region",
-                "data": {
-                  "isIframe": false
-                },
-                "relatedNodes": [],
-                "impact": "moderate",
-                "message": "Some page content is not contained by landmarks"
-              }
-            ],
-            "all": [],
-            "none": [],
-            "impact": "moderate",
-            "html": "<textarea placeholder=\"provide your feedback\" style=\"\"></textarea>",
-            "target": [
-              "textarea[placeholder=\"provide your feedback\"]"
+              "h1"
             ],
             "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
           }

@@ -2,7 +2,7 @@ const { test } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 const fs = require ('fs');
 const reportId = `A11y-${Date.now()}`;
-const applicationName = 'Kumar local';
+const applicationName = 'Kumar local host';
 const scanDate =
     new Date().toLocaleString();
 function getWcagInfo(tags) {
@@ -33,7 +33,7 @@ function getWcagInfo(tags) {
 }
 
 test('Scan Multiple Pages', async ({page}) => {
-    const pages = ['http://apple.com',
+    const pages = ['http://127.0.0.1:5501/index.html',
     ];
 
     let criticalCount = 0;
