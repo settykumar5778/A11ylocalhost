@@ -12,7 +12,7 @@
 # Error details
 
 ```
-Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+Error: frame.evaluate: Execution context was destroyed, most likely because of a navigation
 ```
 
 # Page snapshot
@@ -98,7 +98,7 @@ Error: page.evaluate: Execution context was destroyed, most likely because of a 
   2   | const AxeBuilder = require('@axe-core/playwright').default;
   3   | const fs = require ('fs');
   4   | const reportId = `A11y-${Date.now()}`;
-  5   | const applicationName = 'Kumar local host';
+  5   | const applicationName = 'Kumar local';
   6   | const scanDate =
   7   |     new Date().toLocaleString();
   8   | function getWcagInfo(tags) {
@@ -152,7 +152,7 @@ Error: page.evaluate: Execution context was destroyed, most likely because of a 
   56  |         });
   57  |         const results =
 > 58  |         await new AxeBuilder({page}).analyze();
-      |         ^ Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+      |         ^ Error: frame.evaluate: Execution context was destroyed, most likely because of a navigation
   59  |         results.violations.forEach(v => {
   60  |             const wcagInfo = getWcagInfo(v.tags);
   61  |             if (v.impact === 'critical')

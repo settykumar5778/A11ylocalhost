@@ -2,7 +2,7 @@ const { test } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 const fs = require ('fs');
 const reportId = `A11y-${Date.now()}`;
-const applicationName = 'Kumar local host';
+const applicationName = 'Kumar local';
 const scanDate =
     new Date().toLocaleString();
 function getWcagInfo(tags) {
