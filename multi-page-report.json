@@ -1,6 +1,6 @@
 [
   {
-    "page": "http://127.0.0.1:5500/",
+    "page": "http://127.0.0.1:5500/A11yAutomation/kumar.html",
     "violationCount": 4,
     "violations": [
       {
@@ -241,7 +241,7 @@
             "all": [],
             "none": [],
             "impact": "moderate",
-            "html": "<p>Hi me and nancy collaborating for project related queries </p>",
+            "html": "<p>Hi, me and nancy collaborating for project related queries </p>",
             "target": [
               "p:nth-child(4)"
             ],
@@ -264,7 +264,7 @@
             "impact": "moderate",
             "html": "<a href=\"https:google.com\"> Google </a>",
             "target": [
-              "a"
+              "a[href$=\"https:google.com\"]"
             ],
             "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
           },
@@ -1084,6 +1084,111 @@
             "html": "<p id=\"emailint\">Email1 address should be in the format xxx@gmail.com.</p>",
             "target": [
               "#emailint"
+            ],
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          },
+          {
+            "any": [
+              {
+                "id": "region",
+                "data": {
+                  "isIframe": false
+                },
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<p>Hi everyone this page is practice purpose only <a href=\"https:apple.com\">test</a></p>",
+            "target": [
+              "p:nth-child(61)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          },
+          {
+            "any": [
+              {
+                "id": "region",
+                "data": {
+                  "isIframe": false
+                },
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<strong><u>Feedback:</u></strong>",
+            "target": [
+              "strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          },
+          {
+            "any": [
+              {
+                "id": "region",
+                "data": {
+                  "isIframe": false
+                },
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<p>Please provide your feedback</p>",
+            "target": [
+              "p:nth-child(66)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          },
+          {
+            "any": [
+              {
+                "id": "region",
+                "data": {
+                  "isIframe": false
+                },
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<input type=\"email\" placeholder=\"Enter your email\" required=\"\" style=\"\">",
+            "target": [
+              "input[type=\"email\"][placeholder=\"Enter your email\"][required=\"\"]:nth-child(67)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+          },
+          {
+            "any": [
+              {
+                "id": "region",
+                "data": {
+                  "isIframe": false
+                },
+                "relatedNodes": [],
+                "impact": "moderate",
+                "message": "Some page content is not contained by landmarks"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "moderate",
+            "html": "<textarea placeholder=\"provide your feedback\" style=\"\"></textarea>",
+            "target": [
+              "textarea[placeholder=\"provide your feedback\"]"
             ],
             "failureSummary": "Fix any of the following:\n  Some page content is not contained by landmarks"
           }

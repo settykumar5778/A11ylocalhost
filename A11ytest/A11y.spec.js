@@ -2,7 +2,7 @@ const { test } = require('@playwright/test');
 const AxeBuilder = require('@axe-core/playwright').default;
 const fs = require ('fs');
 const reportId = `A11y-${Date.now()}`;
-const applicationName = 'Apple Accessibility Scan';
+const applicationName = 'Kumar local host1';
 const scanDate =
     new Date().toLocaleString();
 function getWcagInfo(tags) {
@@ -33,7 +33,7 @@ function getWcagInfo(tags) {
 }
 
 test('Scan Multiple Pages', async ({page}) => {
-    const pages = ['http://127.0.0.1:5500/',
+    const pages = ['http://127.0.0.1:5500/A11yAutomation/kumar.html',
     ];
 
     let criticalCount = 0;
@@ -75,6 +75,33 @@ test('Scan Multiple Pages', async ({page}) => {
                 violation.impact === 'serious'
         );
         totalCriticalOrSeriousIssues += criticalOrSeriousIssues.length;
+        for (const violation of results.violations) {
+
+            for (let i = 0; i < violation.nodes.length; i++) {
+               
+                try {
+
+                    const selector = violation.nodes[i].target[0];
+
+                    const locator = page.locator(selector);
+
+                    await locator.evaluate(element => {
+                        element.style.border = '5px solid red';
+
+                        element.style.backgroundColor = 'yellow';
+                    });
+                    
+                    await locator.screenshot({
+                        path:
+                        `screenshots/issues/${violation.id}-${i+1}-element.png`,
+                    });
+                }
+                catch (error) {
+
+                    console.log(`Unable to capture screenshot for ${violation.id}`);
+                }
+            }
+        }
 
         allResults.push({
             page: url,
@@ -178,6 +205,12 @@ allResults.forEach(result => {
                 ${node.failureSummary || 'N/A'}
                 </pre>
                 <p>
+                <strong>Issue Screenshot:</strong>
+                </p>
+                <p>
+                ${v.id}-${nodeIndex+1}.png
+                </p>
+                <p>
                 <strong>Actual Result:</strong>
                 </p>
                 <pre>
@@ -257,7 +290,7 @@ const summarySection = `
       }
 
     console.log("Accessibility Scan Started");
-    console.log("Report Created Successful");
+    console.log("Report Created Successfully");
 
 }
 );
